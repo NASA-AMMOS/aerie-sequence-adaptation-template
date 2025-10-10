@@ -4,13 +4,10 @@ import {
   type OutputLanguage,
   type PhoenixAdaptation,
   type PhoenixContext,
-  // getSeqnLanguage,
+  getSeqnLanguage,
   seqJsonToSeqn,
   seqnToSeqJson,
   seqnParser,
-  getSeqnExtensions,
-  PhoenixResources,
-  SeqNCommandInfoMapper,
 } from "@nasa-jpl/aerie-sequence-languages";
 
 function toInputFormat(output: string) {
@@ -30,23 +27,11 @@ const seqJsonOutputLanguage: OutputLanguage = {
   toInputFormat,
 };
 
-function getInputLanguage(resources: PhoenixResources) {
-  return {
-    name: "SeqN",
-    fileExtension: ".seqN.txt",
-    editorExtension: (context: PhoenixContext) => {
-      const extensions = getSeqnExtensions(resources, context);
-      return [extensions.languageSupport];
-    },
-    commandInfoMapper: new SeqNCommandInfoMapper(),
-  };
-}
-
 ((): PhoenixAdaptation => {
   return {
     getLanguages(resources) {
       return {
-        input: getInputLanguage(resources),
+        input: getSeqnLanguage(resources),
         outputs: [seqJsonOutputLanguage],
       };
     },
