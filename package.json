@@ -1,0 +1,33 @@
+{
+  "name": "phoenix-adaptation-template",
+  "version": "0.0.0",
+  "description": "Template for writing AMMOS SeqDev editor adaptations",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cartermak/phoenix-adaptation-template.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cartermak/phoenix-adaptation-template/issues"
+  },
+  "homepage": "https://github.com/cartermak/phoenix-adaptation-template#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.2",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.52.4",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@nasa-jpl/aerie-sequence-languages": "^0.1.0-alpha.2",
+    "@nasa-jpl/seq-json-schema": "^1.3.1"
+  }
+}
