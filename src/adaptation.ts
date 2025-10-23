@@ -1,10 +1,10 @@
 import type { SeqJson } from "@nasa-jpl/seq-json-schema/types.js";
 import {
   seqJsonLanguage,
+  seqnLanguage,
   type OutputLanguage,
   type PhoenixAdaptation,
   type PhoenixContext,
-  getSeqnLanguage,
   seqJsonToSeqn,
   seqnToSeqJson,
   seqnParser,
@@ -29,11 +29,7 @@ const seqJsonOutputLanguage: OutputLanguage = {
 
 ((): PhoenixAdaptation => {
   return {
-    getLanguages(resources) {
-      return {
-        input: getSeqnLanguage(resources),
-        outputs: [seqJsonOutputLanguage],
-      };
-    },
+    input: seqnLanguage,
+    outputs: [seqJsonOutputLanguage],
   };
 })();
