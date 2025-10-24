@@ -1,6 +1,6 @@
 {
   "name": "phoenix-adaptation-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Template for writing AMMOS SeqDev editor adaptations",
   "type": "module",
   "scripts": {
@@ -9,14 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cartermak/phoenix-adaptation-template.git"
+    "url": "git+https://github.com/NASA-AMMOS/aerie-sequence-adaptation-template.git"
   },
-  "author": "",
+  "author": "Carter Mak <carter.mak@jpl.nasa.gov>",
+  "contributors": [
+    "Dan Delany <delany@jpl.nasa.gov>",
+    "Bryan Duran <bryan.duran@jpl.nasa.gov>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cartermak/phoenix-adaptation-template/issues"
+    "url": "https://github.com/NASA-AMMOS/aerie-sequence-adaptation-template/issues"
   },
-  "homepage": "https://github.com/cartermak/phoenix-adaptation-template#readme",
+  "homepage": "https://github.com/NASA-AMMOS/aerie-sequence-adaptation-template#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.2",
@@ -27,7 +31,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@nasa-jpl/aerie-sequence-languages": "^0.1.0-alpha.2",
+    "@nasa-jpl/aerie-sequence-languages": "0.1.0-alpha.6",
     "@nasa-jpl/seq-json-schema": "^1.3.1"
   }
 }
