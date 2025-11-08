@@ -6,9 +6,12 @@ export default {
   input: "build/src/adaptation.js",
   output: {
     dir: "dist",
+    format: "cjs",             // <- force require() output
+    exports: "auto",           // helps if it uses default + named
   },
+  external: [/^@codemirror/],
   plugins: [
-    nodeResolve(),
+    nodeResolve({ preferBuiltins: true }),
     // @ts-ignore
     commonjs(),
   ],
