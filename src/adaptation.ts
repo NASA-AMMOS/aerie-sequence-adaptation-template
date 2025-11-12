@@ -27,9 +27,10 @@ const seqJsonOutputLanguage: OutputLanguage = {
   toInputFormat,
 };
 
-((): PhoenixAdaptation => {
-  return {
-    input: seqnLanguage,
-    outputs: [seqJsonOutputLanguage],
-  };
-})();
+// Create the main phoenix adaptation and export it for consumers
+const adaptation: PhoenixAdaptation = {
+  input: seqnLanguage,
+  outputs: [seqJsonOutputLanguage]
+}
+
+export { adaptation };
